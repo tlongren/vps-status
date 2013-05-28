@@ -1,0 +1,133 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #697586;
+}
+
+.chrome {
+   width: 700px;
+   height: 400px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -250px;
+   margin-top: -200px;
+   background-color: #34393D;
+   border-radius: 3px;
+   text-align: middle;
+}
+
+.content {
+   position: inherit;
+   background-color: #FFFFFF;
+   top: 30px;
+   right: 0px;
+   left: 0px;
+   bottom:0px;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+}
+
+.circle {
+  height: 7px;
+  width: 7px;
+  margin:10px 0px 0px 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.circle:first-child{
+  
+  background: #CF7C7A;
+}
+.circle:nth-child(2){
+  background: #CCB37B;
+}
+.circle:nth-child(3){
+  background: #78B885;
+}
+
+header {
+  background: #46C3B6;
+  height: 50px;
+  width:100%;
+  position: inherit;
+}
+
+#logo {
+  color: #FFF;
+  padding-top: 15px;
+  text-align: center;
+  font-weight: 800;
+  position: inherit;
+  height: 100%;
+  width: 200px;
+}
+
+.online, header.online {
+    background: #29B6A7;
+}
+
+.offline, header.offline {
+  background: #222222;
+}
+
+#content {
+  background: #434C55;
+  top: 50px;
+  bottom: 0px;
+  width: 700px;
+  position: inherit;
+}
+
+.tab {
+  font-size: 12px;
+  padding: 15px 25px;
+  font-family: 'FontAwesome', sans-serif;
+  color: #949BA7;
+  border-bottom: 1px solid #4C5560;
+}
+.tab:hover {
+  background: #4C5560;
+}
+div i {
+  margin-right: 10px;
+}
+/* ================ */
+/* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
+/* ================ */
+ 
+.grid_1 { width:60px; }
+.grid_2 { width:140px; }
+.grid_3 { width:220px; }
+.grid_4 { width:300px; }
+.grid_5 { width:380px; }
+.grid_6 { width:460px; }
+.grid_7 { width:540px; }
+.grid_8 { width:620px; }
+.grid_9 { width:700px; }
+.grid_10 { width:780px; }
+.grid_11 { width:860px; }
+.grid_12 { width:940px; }
+ 
+.column {
+    margin: 0px 10px;
+    overflow: hidden;
+    float: left;
+    display: inline;
+}
+.row {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+        float: left;
+}
+.row .row {
+    margin: 0 -10px;
+    width: auto;
+ 
+         
+}
