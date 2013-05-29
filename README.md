@@ -1,5 +1,5 @@
 vps-status
-==========
+============
 
 A Server (VPS) Monitor that I made to quickly check the status of my [FlipHost VPS](http://www.fliphost.net/vps.html). Uses [SolusVM Client API](http://docs.solusvm.com/client_api). Your VPS provider must provide this, if it's not something they have, this is probably of zero interest to you.
 
