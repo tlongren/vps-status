@@ -20,9 +20,12 @@ $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
 $statusMessage = $getStuff['statusmsg'];
 
 $memory = explode(",",$getStuff['mem']);
-$totalMem = round($memory[0]/1024/1024, 2)."MB";
-$usedMem = round($memory[1]/1024/1024, 2)."MB";
-$availMem = round($memory[2]/1024/1024, 2)."MB";
+//$totalMem = round($memory[0]/1024/1024, 2)."MB";
+//$usedMem = round($memory[1]/1024/1024, 2)."MB";
+//$availMem = round($memory[2]/1024/1024, 2)."MB";
+$totalMem = $status->formatBytes($memory[0]);
+$usedMem = $status->formatBytes($memory[1]);
+$availMem = $status->formatBytes($memory[2]);
 $memPercent = round($usedMem/$totalMem*100, 0);
 
 $disk = explode(",",$getStuff['hdd']);
