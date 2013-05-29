@@ -1,21 +1,28 @@
 <?php
 /* You can edit all this stuff. */
-$apiurl = "https://solus.fliphost.net/api/client";							// URL to your API client URL, provided by your host
-$apikey = "MBU8J-OXTP9-6FM70";												// Your API Key, provided by your host
+define('apiurl','https://solus.fliphost.net/api/client');
+define('apikey','MBU8J-OXTP9-6FM70');
+
+/*$apiurl = "https://solus.fliphost.net/api/client";							// URL to your API client URL, provided by your host
+$apikey = "MBU8J-OXTP9-6FM70";												// Your API Key, provided by your host */
 $apihash = "09c999cb43e981f5eb4bcaacdf26e335948bb890";						// Your API Hash, provided by your host
 $trustedIP = array("173.22.40.33");											// Allow these IP addresses
 $onlineMessage = "This is good, very good.";								// Message below "It's Online" text
-$onlineReload = "It's Good, Reload Anyway?";									// Text for online reload button
+$onlineReload = "It's Good, Reload Anyway?";								// Text for online reload button
 $offlineMessage = "Something must be wrong, this is not good at all.";		// Message below "It's offline" text
-$offlineReload = "Try Again?";											// Text for offline reload button
+$offlineReload = "Try Again?";												// Text for offline reload button
 /* You should probably stop editing now. Only edit stuff after this if you know what you're doing. */
 
 include 'thestuff.php';
+include 'Googl.class.php';
 
 $headers = apache_request_headers(); $real_client_ip = $headers["X-Forwarded-For"];
 
 $status = new status();
+$googl = new Googl('AIzaSyD-wWDjzkDKac-l_KRZ1aKmtskySWhfxzI');
+
 $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
+$theShortURL = $googl->shorten('http://status.longren.org/');
 
 $statusMessage = $getStuff['statusmsg'];
 
