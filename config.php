@@ -8,18 +8,16 @@ $onlineMessage = "This is good, very good.";								// Message below "It's Onlin
 $onlineReload = "It's Good, Reload Anyway?";								// Text for online reload button
 $offlineMessage = "Something must be wrong, this is not good at all.";		// Message below "It's offline" text
 $offlineReload = "Try Again?";												// Text for offline reload button
+$theShortURL = 'http://goo.gl/rxZiN';
 /* You should probably stop editing now. Only edit stuff after this if you know what you're doing. */
 
 include 'thestuff.php';
-include 'Googl.class.php';
 
 $headers = apache_request_headers(); $real_client_ip = $headers["X-Forwarded-For"];
 
 $status = new status();
-$googl = new Googl('AIzaSyD-wWDjzkDKac-l_KRZ1aKmtskySWhfxzI');
-
 $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
-$theShortURL = $googl->shorten('http://status.longren.org');
+
 
 $statusMessage = $getStuff['statusmsg'];
 
