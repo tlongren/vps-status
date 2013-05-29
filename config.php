@@ -8,7 +8,7 @@ $onlineMessage = "This is good, very good.";								// Message below "It's Onlin
 $onlineReload = "It's Good, Reload Anyway?";								// Text for online reload button
 $offlineMessage = "Something must be wrong, this is not good at all.";		// Message below "It's offline" text
 $offlineReload = "Try Again?";												// Text for offline reload button
-$theShortURL = 'http://goo.gl/rxZiN';
+$theShortURL = 'http://goo.gl/rxZiN';										// URL that will be shared when people click share on twitter of google+ buttons
 /* You should probably stop editing now. Only edit stuff after this if you know what you're doing. */
 
 include 'thestuff.php';
