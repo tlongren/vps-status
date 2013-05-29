@@ -82,7 +82,7 @@
         border-radius: 0 3px 3px 0;
       }
       .percentage {
-        font-size:16px;
+        font-size:20px;
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
