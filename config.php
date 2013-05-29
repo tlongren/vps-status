@@ -1,10 +1,7 @@
 <?php
 /* You can edit all this stuff. */
-define('apiurl','https://solus.fliphost.net/api/client');
-define('apikey','MBU8J-OXTP9-6FM70');
-
-/*$apiurl = "https://solus.fliphost.net/api/client";							// URL to your API client URL, provided by your host
-$apikey = "MBU8J-OXTP9-6FM70";												// Your API Key, provided by your host */
+$apiurl = "https://solus.fliphost.net/api/client";							// URL to your API client URL, provided by your host
+$apikey = "MBU8J-OXTP9-6FM70";												// Your API Key, provided by your host
 $apihash = "09c999cb43e981f5eb4bcaacdf26e335948bb890";						// Your API Hash, provided by your host
 $trustedIP = array("173.22.40.33");											// Allow these IP addresses
 $onlineMessage = "This is good, very good.";								// Message below "It's Online" text
