@@ -20,25 +20,22 @@ $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
 $statusMessage = $getStuff['statusmsg'];
 
 $memory = explode(",",$getStuff['mem']);
-//$totalMem = round($memory[0]/1024/1024, 2)."MB";
-//$usedMem = round($memory[1]/1024/1024, 2)."MB";
-//$availMem = round($memory[2]/1024/1024, 2)."MB";
 $totalMem = $status->formatBytes($memory[0]);
 $usedMem = $status->formatBytes($memory[1]);
 $availMem = $status->formatBytes($memory[2]);
 $memPercent = round($memory[1]/$memory[0]*100, 0);
 
 $disk = explode(",",$getStuff['hdd']);
-$totalDisk = round($disk[0]/1024/1024/1024, 2)."GB";
-$usedDisk = round($disk[1]/1024/1024/1024, 2)."GB";
-$availDisk = round($disk[2]/1024/1024/1024, 2)."GB";
-$diskPercent = round($usedDisk/$totalDisk*100, 0);
+$totalDisk = $status->formatBytes($disk[0]);
+$usedDisk = $status->formatBytes($disk[1]);
+$availDisk = $status->formatBytes($disk[2]);
+$diskPercent = round($disk[1]/$disk[0]*100, 0);
 
 $bandwidth = explode(",",$getStuff['bw']);
-$totalBW = round($bandwidth[0]/1024/1024/1024/1024, 2)."TB";
-$usedBW = round($bandwidth[1]/1024/1024/1024/1024, 2)."TB";
-$availBW = round($bandwidth[2]/1024/1024/1024/1024, 2)."TB";
-$bwPercent = round($usedBW/$totalBW*100, 0);
+$totalBW = $status->formatBytes($bandwidth[0]);
+$usedBW = $status->formatBytes($bandwidth[1]);
+$availBW = $status->formatBytes($bandwidth[2]);
+$bwPercent = round($bandwidth[1]/$bandwidth[0]*100, 0);
 if ($usedBW < 1) {
   $usedBW = round($bandwidth[1]/1024/1024/1024, 2)."GB";
 }
