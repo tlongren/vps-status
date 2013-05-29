@@ -19,7 +19,7 @@ $status = new status();
 $googl = new Googl('AIzaSyD-wWDjzkDKac-l_KRZ1aKmtskySWhfxzI');
 
 $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
-$theShortURL = $googl->shorten('http://status.longren.org/');
+$theShortURL = $googl->shorten('http://status.longren.org');
 
 $statusMessage = $getStuff['statusmsg'];
 
