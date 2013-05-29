@@ -1,0 +1,56 @@
+.button {
+	display: inline-block;
+	padding: 1em 2em 1em 2em;
+	margin: 1em;
+	color: white;
+}
+.facebook {
+	background: rgb(59,89,152);
+}
+.twitter {
+	background: rgb(32,148,202);
+}
+.google-plus {
+	background: rgb(199,53,37);
+}
+.pinterest {
+	background: rgb(203,32,39);
+}
+.dribbble {
+	background: rgb(213,51,93);
+}
+.github {
+	background: rgb(74,83,91);
+}
+/* safari and chrome */
+@-webkit-keyframes wiggle {
+	0% {-webkit-transform:rotate(4deg);}
+	50% {-webkit-transform:rotate(-4deg);}
+	100% {-webkit-transform:rotate(4deg);}
+}
+ 
+/* firefox */
+@-moz-keyframes wiggle {
+	0% {-moz-transform:rotate(4deg);}
+	50% {-moz-transform:rotate(-4deg);}
+	100% {-moz-transform:rotate(4deg);}
+}
+ 
+/* anyone brave enough to implement the ideal method */
+@keyframes wiggle {
+	0% {transform:rotate(4deg);}
+	50% {transform:rotate(-4deg);}
+	100% {transform:rotate(4deg);}
+}
+.button:hover {
+	color: white;
+	-webkit-animation: wiggle 0.5s infinite;
+	-moz-animation: wiggle 0.5s infinite;
+	animation: wiggle 0.5s infinite;
+}
+
+.box {
+	-moz-box-shadow: 10px 10px 3px #888;
+	-webkit-box-shadow: 10px 10px 3px #888;
+	box-shadow: 10px 10px 3px #888;
+}

@@ -1,0 +1,16 @@
+.button{display:inline-block;padding:1em 2em 1em 2em;margin:1em;color:white;}.facebook{background:#3b5998;}
+.twitter{background:#2094ca;}.google-plus{background:#c73525;}.pinterest{background:#cb2027;}
+.dribbble{background:#d5335d;}.github{background:#4a535b;}@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(4deg);}
+50%{-webkit-transform:rotate(-4deg);}100%{-webkit-transform:rotate(4deg);}}@-moz-keyframes wiggle{0%{-moz-transform:rotate(4deg);}
+50%{-moz-transform:rotate(-4deg);}100%{-moz-transform:rotate(4deg);}}@keyframes wiggle{0%{transform:rotate(4deg);}
+50%{transform:rotate(-4deg);}100%{transform:rotate(4deg);}}.button:hover{color:white;-webkit-animation:wiggle .5s infinite;-moz-animation:wiggle .5s infinite;animation:wiggle .5s infinite;}
+.box{-moz-box-shadow:10px 10px 3px #888;-webkit-box-shadow:10px 10px 3px #888;box-shadow:10px 10px 3px #888;}
+@font-face{font-family:'icomoon';src:url('fonts/icomoon.eot');src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),url('fonts/icomoon.svg#icomoon?v=.2') format('svg'),url('fonts/icomoon.woff') format('woff'),url('fonts/icomoon.ttf') format('truetype');font-weight:normal;font-style:normal;}
+[data-icon]:before{font-family:'icomoon';content:attr(data-icon);speak:none;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
+.icon-google-plus:before,.icon-facebook:before,.icon-twitter:before,.icon-pinterest:before,.icon-dribbble:before,.icon-github:before{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
+.icon-facebook:before{content:"\66";}.icon-twitter:before{content:"\74";}.icon-github:before{content:"\69";}
+.icon-pinterest:before{content:"\70";}.icon-google-plus:before{content:"\67";}.icon-dribbble:before{content:"\64";}
+.icon-google-plus,.icon-facebook,.icon-twitter,.icon-pinterest,.icon-dribbble,.icon-github{display:inline-block;}
+body{font-family:sans-serif;color:#444;line-height:1.5;font-size:1em;background:lightgrey;}
+.buttons-preview{max-width:40em;margin:0 auto;text-align:center;margin-bottom:50px;}
+.link{font-size:2em;}
