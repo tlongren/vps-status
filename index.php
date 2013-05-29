@@ -81,6 +81,9 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+      .percentage {
+        font-size:16px;
+      }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -128,7 +131,7 @@
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
-          <h2>Disk (<?=$diskPercent?>%)</h2>
+          <h2>Disk <span class="percentage">(<?=$diskPercent?>%)</span></h2>
           <div class="progress progress-striped">
             <div class="bar" style="width: <?=$diskPercent?>%;"></div>
           </div>
@@ -137,7 +140,7 @@
           <p><span class="label label-inverse">Disk Available: <?=$availDisk?></span></p>
         </div>
         <div class="span4">
-          <h2>RAM (<?=$memPercent?>%)</h2>
+          <h2>RAM <span class="percentage">(<?=$memPercent?>%)</span></h2>
           <div class="progress progress-info progress-striped">
             <div class="bar" style="width: <?=$memPercent?>%;"></div>
           </div>
@@ -146,7 +149,7 @@
           <p><span class="label label-info">RAM Available: <?=$availMem?></span></p>
        </div>
         <div class="span4">
-          <h2>Bandwidth (<?=$bwPercent?>%)</h2>
+          <h2>Bandwidth <span class="percentage">(<?=$bwPercent?>%)</span></h2>
           <div class="progress progress-danger progress-striped">
             <div class="bar" style="width: <?=$bwPercent?>%;"></div>
           </div>
