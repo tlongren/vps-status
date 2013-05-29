@@ -115,8 +115,8 @@
         <p class="lead"><?=$onlineMessage?></p>
         <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
         <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe><br /><br />
-        <a href="http://twitter.com/home?status=Currently reading: [URL]" class="button twitter">Share on <span class="icon-twitter"></span></a>
-        <a href="https://plus.google.com/share?url=[URL]" class="button google-plus">Share on <span class="icon-google-plus"></span></a>
+        <a href="http://twitter.com/home?status=Currently reading: <?=$theShortURL?>" class="button twitter">Share on <span class="icon-twitter"></span></a>
+        <a href="https://plus.google.com/share?url=<?=$theShortURL?>" class="button google-plus">Share on <span class="icon-google-plus"></span></a>
         <?php } else { ?>
         <p class="lead"><?=$offlineMessage?></p>
         <a class="btn btn-large btn-warning" href="#" onClick="window.location.reload()"><?=$offlineReload?></a>
