@@ -174,6 +174,12 @@
       s.parentNode.insertBefore(t, s);
     })();
     </script>
+    <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+    <script type="text/javascript">
+    try {
+    reinvigorate.track("49098-6x8odoxv4c");
+    } catch(err) {}
+    </script>
     <script type="text/javascript">
     $('body').keymapper({
       keys: 'r',
