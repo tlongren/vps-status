@@ -189,5 +189,6 @@
         callback: function() { window.location.reload(); }
       });
     </script>
+    <script src="js/updateInfo.js"></script>
   </body>
 </html>
