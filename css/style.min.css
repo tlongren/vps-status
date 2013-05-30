@@ -11,6 +11,5 @@
 .icon-facebook:before{content:"\66";}.icon-twitter:before{content:"\74";}.icon-github:before{content:"\69";}
 .icon-pinterest:before{content:"\70";}.icon-google-plus:before{content:"\67";}.icon-dribbble:before{content:"\64";}
 .icon-google-plus,.icon-facebook,.icon-twitter,.icon-pinterest,.icon-dribbble,.icon-github{display:inline-block;}
-body{font-family:sans-serif;color:#444;line-height:1.5;font-size:1em;background:lightgrey;}
 .buttons-preview{max-width:40em;margin:0 auto;text-align:center;margin-bottom:50px;}
 .link{font-size:2em;}
