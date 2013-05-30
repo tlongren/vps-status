@@ -2,9 +2,9 @@ $(function() {
   function loadVPSInfo() {
       $.getJSON("/updateInfo.php", 
       function(result) {
-		alert(result);
+		//alert(result);
     });
   }
-  setInterval(loadVPSInfo, 5000);
+  setInterval(loadVPSInfo, 600000);
   loadVPSInfo();
 });
