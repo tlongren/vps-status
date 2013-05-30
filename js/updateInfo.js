@@ -3,7 +3,7 @@ $(function() {
       $.getJSON("/updateInfo.php", 
       function(result) {
 		//alert(result);
-		var serverStatus = result.0;
+		var serverStatus = result[0];
 		alert(serverStatus);
     });
   }
