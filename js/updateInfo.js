@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	setInterval(function(){
+
+	$(document).setInterval(function(){
 		theData = new Array();
 		$.ajax({
 		    url:"/updateInfo.php",
@@ -11,4 +11,3 @@ $(document).ready(function() {
 		    "json"
 		});
 	}, 5000);
-});	
