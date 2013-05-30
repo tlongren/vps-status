@@ -9,6 +9,6 @@ $(document).ready(function() {
 		        alert(theData);
 		    },
 		    "json"
-		});
+		);
 	}, 5000);
 });	
