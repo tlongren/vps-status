@@ -12,7 +12,7 @@ $(function() {
 		var availMem = result[3];
 		$("#availMem").html("(" + availMem + ")");
 		var memPercent = result[4];
-		$("#memPercent").html("(" + memPercent + ")");
+		$("#memPercent").html("(" + memPercent + "%)");
 		$("#memPercentBar").css("width", memPercent + "%");
 		var totalDisk = result[5];
 		$("#totalDisk").html("(" + totalDisk + ")");
@@ -21,7 +21,7 @@ $(function() {
 		var availDisk = result[7];
 		$("#availDisk").html("(" + availDisk + ")");
 		var diskPercent = result[8];
-		$("diskPercent").html("(" + diskPercent + ")");
+		$("diskPercent").html("(" + diskPercent + "%)");
 		$("#diskPercentBar").css("width", diskPercent + "%");
 		var totalBW = result[9];
 		$("#totalBW").html("(" + totalBW + ")");
@@ -30,7 +30,7 @@ $(function() {
 		var availBW = result[11];
 		$("#availBW").html(availBW);
 		var bwPercent = result[12];
-		$("#bwPercent").html("(" + bwPercent + ")");
+		$("#bwPercent").html("(" + bwPercent + "%)");
 		$("#bwPercentBar").css("width", bwPercent + "%");
 		var onlineMessage = result[13];
 		$("#onlineMessage").html("(" + onlineMessage + ")");

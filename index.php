@@ -189,8 +189,8 @@
         callback: function() { window.location.reload(); }
       });
     </script>
-    <?php if ($dynamicUpdates == true) {
+    <?php if ($dynamicUpdates == true) { ?>
       <script src="js/updateInfo.js"></script>
-    }
+    <?php } ?>
   </body>
 </html>
