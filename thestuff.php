@@ -33,6 +33,21 @@ class status {
 	    // $bytes /= pow(1024, $pow);
 	    $bytes /= (1 << (10 * $pow)); 
 	    return round($bytes, $precision) . ' ' . $units[$pow];
-	} 
+	}
+
+	function googl_shortlink($url) {
+		$http = new WP_Http();
+		$headers = array('Content-Type' => 'application/json');
+		$result = $http->request('https://www.googleapis.com/urlshortener/v1/url', array( 'method' => 'POST', 'body' => '{"longUrl": "' . $url . '"}', 'headers' => $headers));
+		$result = json_decode($result['body']);
+		$shortlink = $result->id;
+		if ($shortlink) {
+			add_post_meta($post_id, '_googl_shortlink', $shortlink, true);
+			return $shortlink;
+		}
+		else {
+			return $url;
+		}
+	}
 }
 ?>

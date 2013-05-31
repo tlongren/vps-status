@@ -8,6 +8,7 @@ $(function() {
 		var usedMem = result[2];
 		var availMem = result[3];
 		var memPercent = result[4];
+		$("#memPercent").html("(" + memPercent + ")");
 		var totalDisk = result[5];
 		var usedDisk = result[6];
 		var availDisk = result[7];
@@ -16,9 +17,10 @@ $(function() {
 		var usedBW = result[10];
 		var availBW = result[11];
 		var bwPercent = result[12];
+
 		//alert(serverStatus);
     });
   }
-  setInterval(loadVPSInfo, 600000);
+  setInterval(loadVPSInfo, 5000);
   loadVPSInfo();
 });
