@@ -7,7 +7,9 @@ A Server (VPS) Monitor that I made to quickly check the status of my [FlipHost V
 What It Does
 ============
 
-Shows you weather or not your chosen server is online, disk usage, RAM usage, and bandwidth usage. You can see [a demo on Heroku](http://status.longren.org/). Click the button to refresh the page. You can also press the 'r' key on your keyboard to refresh.
+Shows you weather or not your chosen server is online, disk usage, RAM usage, and bandwidth usage. You can see [a demo on Heroku](http://status.longren.org/). Click the button to refresh the page. You can also press the 'r' key on your keyboard to refresh. 
+
+There's also an option in config.php to enable live updating of values via ajax. To enable, set ```PHP $dynamicUpdates = true;``` in config.php and refresh your page.
 
 
 What It Doesn't Do
@@ -27,7 +29,8 @@ To-Do
 
 1. If offline, offer option to boot.
 2. If online, offer option to reboot or shutdown.
-3. Secure folder with .htaccess logins
+3. Secure folder with .htaccess logins.
+~~4. Add a feature to do live updates with jQuery.~~
 
 
 I used
