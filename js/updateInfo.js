@@ -4,7 +4,7 @@ $(function() {
       function(result) {
 		//alert(result);
 		var statusMessage = result[0];
-		$("#statusMessage").html("(" + statusMessage + ")");
+		$("#statusMessage").html(statusMessage);
 		var totalMem = result[1];
 		$("#totalMem").html(totalMem);
 		var usedMem = result[2];
