@@ -15,7 +15,7 @@ $(function() {
 		$("#memPercent").html("(" + memPercent + "%)");
 		$("#memPercentBar").css("width", memPercent + "%");
 		var totalDisk = result[5];
-		$("#totalDisk").html(totalDis + ")");
+		$("#totalDisk").html(totalDisk + ")");
 		var usedDisk = result[6];
 		$("#usedDisk").html(usedDisk);
 		var availDisk = result[7];
