@@ -46,7 +46,7 @@ PHP, [SolusVM Client API](http://docs.solusvm.com/client_api), [Twitter Bootstra
 
 
 How To Contribute
------------------------------
+=================
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
