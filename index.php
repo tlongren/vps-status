@@ -112,16 +112,16 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>It's <?=ucwords($statusMessage)?></h1>
+        <h1>It's <span id="statusMessage"><?=ucwords($statusMessage)?></span></h1>
 
         <?php if ($statusMessage == "online") { ?>
-        <p class="lead"><?=$onlineMessage?></p>
+        <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
         <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
         <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe><br /><br />
         <a href="http://twitter.com/home?status=Checking the VPS status page from @tlongren: <?=$theShortURL?>" class="button twitter" target="_blank">Share on <span class="icon-twitter"></span></a>
         <a href="https://plus.google.com/share?url=<?=$theShortURL?>" class="button google-plus" target="_blank">Share on <span class="icon-google-plus"></span></a>
         <?php } else { ?>
-        <p class="lead"><?=$offlineMessage?></p>
+        <p class="lead" id="offlineMessage"><?=$offlineMessage?></p>
         <a class="btn btn-large btn-warning" href="#" onClick="window.location.reload()"><?=$offlineReload?></a>
         <?php } ?>
       </div>
@@ -133,29 +133,29 @@
         <div class="span4">
           <h2>Disk <span class="percentage" id="diskPercent">(<?=$diskPercent?>%)</span></h2>
           <div class="progress progress-striped">
-            <div class="bar" style="width: <?=$diskPercent?>%;"></div>
+            <div class="bar" style="width: <?=$diskPercent?>%;" id="diskPercentBar"></div>
           </div>
-          <p><span class="label label-inverse">Disk Total: <?=$totalDisk?></span></p>
-          <p><span class="label label-inverse">Disk Used: <?=$usedDisk?></span></p>
-          <p><span class="label label-inverse">Disk Available: <?=$availDisk?></span></p>
+          <p><span class="label label-inverse">Disk Total: <span id="totalDisk"><?=$totalDisk?></span></span></p>
+          <p><span class="label label-inverse">Disk Used: <span id="usedDisk"><?=$usedDisk?></span></span></p>
+          <p><span class="label label-inverse">Disk Available: <span id="availDisk"><?=$availDisk?></span></span></p>
         </div>
         <div class="span4">
           <h2>RAM <span class="percentage" id="memPercent">(<?=$memPercent?>%)</span></h2>
           <div class="progress progress-info progress-striped">
-            <div class="bar" style="width: <?=$memPercent?>%;"></div>
+            <div class="bar" style="width: <?=$memPercent?>%;" id="memPercentBar"></div>
           </div>
-          <p><span class="label label-info">RAM Total: <?=$totalMem?></span></p>
-          <p><span class="label label-info">RAM Used: <?=$usedMem?></span></p>
-          <p><span class="label label-info">RAM Available: <?=$availMem?></span></p>
+          <p><span class="label label-info">RAM Total: <span id="totalMem"><?=$totalMem?></span></span></p>
+          <p><span class="label label-info">RAM Used: <span id="usedMem"><?=$usedMem?></span></span></p>
+          <p><span class="label label-info">RAM Available: <span id="availMem"><?=$availMem?></span></span></p>
        </div>
         <div class="span4">
           <h2>Bandwidth <span class="percentage" id="bwPercent">(<?=$bwPercent?>%)</span></h2>
           <div class="progress progress-danger progress-striped">
-            <div class="bar" style="width: <?=$bwPercent?>%;"></div>
+            <div class="bar" style="width: <?=$bwPercent?>%;" id="bwPercentBar"></div>
           </div>
-          <p><span class="label label-important">Bandwidth Total: <?=$totalBW?></span></p>
-          <p><span class="label label-important">Bandwidth Used: <?=$usedBW?></span></p>
-          <p><span class="label label-important">Bandwidth Available: <?=$availBW?></span></p>
+          <p><span class="label label-important">Bandwidth Total: <span id="totalBW"><?=$totalBW?></span></span></p>
+          <p><span class="label label-important">Bandwidth Used: <span id="usedBW"><?=$usedBW?></span></span></p>
+          <p><span class="label label-important">Bandwidth Available: <span id="availBW"><?=$availBW?></span></span></p>
         </div>
       </div>
       <hr>
@@ -189,6 +189,8 @@
         callback: function() { window.location.reload(); }
       });
     </script>
-    <script src="js/updateInfo.js"></script>
+    <?php if ($dynamicUpdates == true) {
+      <script src="js/updateInfo.js"></script>
+    }
   </body>
 </html>
