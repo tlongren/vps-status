@@ -9,7 +9,7 @@ What It Does
 
 Shows you weather or not your chosen server is online, disk usage, RAM usage, and bandwidth usage. You can see [a demo on Heroku](http://status.longren.org/). Click the button to refresh the page. You can also press the 'r' key on your keyboard to refresh. 
 
-There's also an option in config.php to enable live updating of values via ajax. To enable, set ```PHP $dynamicUpdates = true;``` in config.php and refresh your page.
+There's also an option in config.php to enable live updating of values via ajax. To enable, set ``` $dynamicUpdates = true; ``` in config.php and refresh your page.
 
 
 What It Doesn't Do
@@ -22,6 +22,12 @@ How To Use It
 =============
 
 Upload the files to your webserver. Change values in config.php to match your client api URL, enter API key and hash. Save, upload to server. Now open browser and visit server. If you uploaded index.php and the other files to the /status/ folder on your server, visit http://yourdomain.com/status/.
+
+
+A Note On Memory Usage
+======================
+
+Memory usage in the Solus API is [apparently broken](http://goo.gl/d90xx). The values they're reporting for usage include the cache and other things, which it shouldn't contain. [iKeyZ](http://goo.gl/Fyo39) on reddit says he reported it to Solus a while ago and they said they'd fix it, but apparently haven't followed through.
 
 
 To-Do
