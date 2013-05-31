@@ -39,7 +39,4 @@ $totalBW = $status->formatBytes($bandwidth[0]);
 $usedBW = $status->formatBytes($bandwidth[1]);
 $availBW = $status->formatBytes($bandwidth[2]);
 $bwPercent = round($bandwidth[1]/$bandwidth[0]*100, 0);
-if ($usedBW < 1) {
-  $usedBW = round($bandwidth[1]/1024/1024/1024, 2)."GB";
-}
 ?>
