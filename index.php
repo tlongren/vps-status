@@ -101,6 +101,8 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="js/jquery.keymapper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
   </head>
 
   <body>
@@ -112,6 +114,15 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
+        <div class="pin-wrapper" style="height: 238px;">
+          <div class="pinned note-container" style="width: 262px;">
+            <div class="note">
+              <h3>Pin it!</h3>
+              <p>Great for pinned navigations — or just about anything you want to stick.</p>
+              <p>Developed by <a href="http://www.webpop.com">Webpop</a>.</p>
+            </div>
+          </div>
+        </div>
         <h1>It's <span id="statusMessage"><?=ucwords($statusMessage)?></span></h1>
 
         <?php if ($statusMessage == "online") { ?>
@@ -140,7 +151,7 @@
           <p><span class="label label-inverse">Disk Available: <span id="availDisk"><?=$availDisk?></span></span></p>
         </div>
         <div class="span4">
-          <h2>RAM <span class="percentage" id="memPercent">(<?=$memPercent?>%)</span></h2>
+          <h2>RAM <span class="percentage" id="memPercent" data-toggle="tooltip" data-placement="right" title="" data-original-title="SolusAPI reports memory incorrectly. Just a heads-up.">(<?=$memPercent?>%)</span></h2>
           <div class="progress progress-info progress-striped">
             <div class="bar" style="width: <?=$memPercent?>%;" id="memPercentBar"></div>
           </div>
@@ -192,5 +203,10 @@
     <?php if ($dynamicUpdates == true) { ?>
       <script src="js/updateInfo.js"></script>
     <?php } ?>
+    <script type="text/javascript">
+    $('#memPercent').tooltip({
+      selector: "span[data-toggle=tooltip]"
+    })
+    </script>
   </body>
 </html>
