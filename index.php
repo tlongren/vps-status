@@ -84,6 +84,10 @@
       .percentage {
         font-size:20px;
       }
+
+      #memPercentTitle a:hover {
+        text-decoration: none;
+      }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
