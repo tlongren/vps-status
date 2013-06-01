@@ -114,15 +114,6 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <div class="pin-wrapper" style="height: 238px;">
-          <div class="pinned note-container" style="width: 262px;">
-            <div class="note">
-              <h3>Pin it!</h3>
-              <p>Great for pinned navigations — or just about anything you want to stick.</p>
-              <p>Developed by <a href="http://www.webpop.com">Webpop</a>.</p>
-            </div>
-          </div>
-        </div>
         <h1>It's <span id="statusMessage"><?=ucwords($statusMessage)?></span></h1>
 
         <?php if ($statusMessage == "online") { ?>
