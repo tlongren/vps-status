@@ -142,7 +142,7 @@
           <p><span class="label label-inverse">Disk Available: <span id="availDisk"><?=$availDisk?></span></span></p>
         </div>
         <div class="span4">
-          <h2>RAM <span class="percentage" id="memPercent">(<?=$memPercent?>%) <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="SolusAPI reports memory incorrectly. Just a heads-up.">*</a></span></h2>
+          <h2 id="memPercentTitle"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="SolusAPI reports memory incorrectly. Just a heads-up.">RAM</a> <span class="percentage" id="memPercent">(<?=$memPercent?>%)</span></h2>
           <div class="progress progress-info progress-striped">
             <div class="bar" style="width: <?=$memPercent?>%;" id="memPercentBar"></div>
           </div>
@@ -195,7 +195,7 @@
       <script src="js/updateInfo.js"></script>
     <?php } ?>
     <script type="text/javascript">
-    $('#memPercent').tooltip({
+    $('#memPercentTitle').tooltip({
       selector: "a[data-toggle=tooltip]"
     })
     </script>
