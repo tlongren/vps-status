@@ -196,7 +196,7 @@
     <?php } ?>
     <script type="text/javascript">
     $('#memPercent').tooltip({
-      selector: "span[data-toggle=tooltip]"
+      selector: "span#memPercent[data-toggle=tooltip]"
     })
     </script>
   </body>
