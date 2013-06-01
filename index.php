@@ -146,7 +146,7 @@
           <p><span class="label label-inverse">Disk Available: <span id="availDisk"><?=$availDisk?></span></span></p>
         </div>
         <div class="span4">
-          <h2 id="memPercentTitle">RAM <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="SolusAPI reports RAM usage incorrectly. Just a heads-up.">*</a> <span class="percentage" id="memPercent">(<?=$memPercent?>%)</span></h2>
+          <h2 id="memPercentTitle">RAM <span class="percentage" id="memPercent">(<?=$memPercent?>%)</span> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="SolusAPI reports RAM usage incorrectly. Just a heads-up.">*</a></h2>
           <div class="progress progress-info progress-striped">
             <div class="bar" style="width: <?=$memPercent?>%;" id="memPercentBar"></div>
           </div>
