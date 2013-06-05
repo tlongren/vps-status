@@ -20,7 +20,7 @@ $status = new status();
 $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
 
 
-$statusMessage = ucfirst($getStuff['statusmsg']);
+$statusMessage = $getStuff['statusmsg'];
 
 $memory = explode(",",$getStuff['mem']);
 $totalMem = $status->formatBytes($memory[0]);

@@ -88,6 +88,10 @@
       #memPercentTitle a:hover {
         text-decoration: none;
       }
+
+      #statusMessage {
+        text-transform:capitalize;
+      }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -118,7 +122,7 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>It's <span id="statusMessage"><?=ucwords($statusMessage)?></span></h1>
+        <h1>It's <span id="statusMessage"><?=ucfirst($statusMessage)?></span></h1>
 
         <?php if ($statusMessage == "online") { ?>
         <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
