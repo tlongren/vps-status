@@ -44,6 +44,6 @@ $(function() {
 		//alert(serverStatus);
     });
   }
-  setInterval(loadVPSInfo, 5000);
+  setInterval(loadVPSInfo, 1000);
   loadVPSInfo();
 });
