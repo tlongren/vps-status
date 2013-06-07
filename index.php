@@ -200,7 +200,7 @@
       });
     </script>
     <?php if ($dynamicUpdates == true) { ?>
-      <script src="js/updateInfo.js"></script>
+      <script src="js/updateInfo.js.php"></script>
     <?php } ?>
     <script type="text/javascript">
     $('#memPercentTitle').tooltip({

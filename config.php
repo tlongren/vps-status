@@ -4,6 +4,7 @@ $apiurl = "https://solus.fliphost.net/api/client";							// URL to your API clie
 $apikey = "MBU8J-OXTP9-6FM70";												// Your API Key, provided by your host
 $apihash = "09c999cb43e981f5eb4bcaacdf26e335948bb890";						// Your API Hash, provided by your host
 $dynamicUpdates = true;														// Poll the API every 5 seconds, set to false if you don't want this feature
+$refreshRate = "1000";														// Time in milliseconds before refreshing values from API
 $trustedIP = array("173.22.40.33");											// Allow these IP addresses
 $onlineMessage = "This is good, very good.";								// Message below "It's Online" text
 $onlineReload = "It's Good, Reload Anyway?";								// Text for online reload button
