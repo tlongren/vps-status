@@ -92,6 +92,34 @@
       #statusMessage {
         text-transform:capitalize;
       }
+
+      div#statuses {
+  font-color:#444;
+  background:-webkit-linear-gradient(top,#fff 0%,#ddd 100%);
+  line-height:1.6em;
+  border:1px solid #8a8a8a;
+  margin:50px auto;
+  padding:40px;
+  width:50%;
+  min-width:300px;
+  max-width:800px;
+  position:relative;
+  border-radius:3px;
+  background:white;
+  box-shadow:0 5px 5px -2px rgba(0,0,0,0.6), inset 10px 0 8px -5px rgba(0,0,0,0.1), inset -10px 0 8px -5px rgba(0,0,0,0.1), inset 0 0 100px 10px rgba(0,0,0,0.2);
+}
+div#statuses:after {
+  background:-webkit-linear-gradient(left,#1abc9c 0%,#16a085 10%,#2ecc71 10%,#27ae60 20%,#3498db 20%,#2980b9 30%,#9b59b6 30%,#8e44ad 40%,#34495e 40%,#2c3e50 50%,#f1c40f 50%,#f39c12 60%,#e67e22 60%,#d35400 70%,#e74c3c 70%,#c0392b 80%,#ecf0f1 80%,#bdc3c7 90%,#95a5a6 90%,#7f8c8d 100%);
+  left:0;
+  right:0;
+  content:'';
+  top:0;
+  height:10px;
+  position:absolute;
+  transition:all .4s ease;
+  box-shadow:inset 10px 0 8px -5px rgba(0,0,0,0.1), inset -10px 0 8px -5px rgba(0,0,0,0.1), inset 0 0 100px 10px rgba(0,0,0,0.2);
+}
+div#statuses:hover:after { height:5px; }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -139,7 +167,7 @@
       <hr>
 
       <!-- Example row of columns -->
-      <div class="row-fluid">
+      <div class="row-fluid" id="statuses">
         <div class="span4">
           <h2>Disk <span class="percentage" id="diskPercent">(<?=$diskPercent?>%)</span></h2>
           <div class="progress progress-striped">
