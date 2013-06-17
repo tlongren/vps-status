@@ -1,6 +1,5 @@
 <?php include '../config.php'; ?>
 $(function() {
-	var statusMessage;
   function loadVPSInfo() {
       $.getJSON("/updateInfo.php", 
       function(result) {
@@ -58,7 +57,6 @@ $(function() {
 		$("#offlineReload").html(offlineReload);
     });
   }
-  var lastStatusMessage = statusMessage;
   setInterval(loadVPSInfo, <?=$refreshRate?>);
   loadVPSInfo();
 });
