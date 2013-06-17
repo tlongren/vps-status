@@ -1,11 +1,26 @@
 <?php include '../config.php'; ?>
 $(function() {
+	var statusMessage;
   function loadVPSInfo() {
       $.getJSON("/updateInfo.php", 
       function(result) {
 		//alert(result);
 		var statusMessage = result[0];
 		$("#statusMessage").html(statusMessage);
+		if (statusMessage == 'offline') {
+			$("#reboot").hide();
+			$("#shutdown").hide();
+			$("#boot").show();
+			$("#onlineHeader").hide();
+			$("#offlineHeader").show();
+		}
+		if (statusMessage == "online") {
+			$("#boot").hide();
+			$("#reboot").show();
+			$("#shutdown").show();
+			$("#offlineHeader").hide();
+			$("#onlineHeader").show();
+		}
 		var totalMem = result[1];
 		$("#totalMem").html(totalMem);
 		var usedMem = result[2];
@@ -41,10 +56,9 @@ $(function() {
 		$("#onlineReload").html(onlineReload);
 		var offlineReload = result[12];
 		$("#offlineReload").html(offlineReload);
-
-		//alert(serverStatus);
     });
   }
+  var lastStatusMessage = statusMessage;
   setInterval(loadVPSInfo, <?=$refreshRate?>);
   loadVPSInfo();
 });

@@ -93,7 +93,7 @@
         text-transform:capitalize;
       }
 
-      #actionResults, #bootResult, #rebootResult, #shutdownResult {
+      #actionResults, #bootResult, #rebootResult, #shutdownResult, #boot, #reboot, #shutdown, #onlineHeader, #offlineHeader {
         display:none;
       }
     </style>
@@ -130,27 +130,24 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>It's <span id="statusMessage"><?=ucfirst($statusMessage)?></span></h1>
-
-        <?php if ($statusMessage == "online") { ?>
-        <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
-        <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
-        <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe><br /><br />
-        <a href="http://twitter.com/home?status=Checking the VPS status page from @tlongren: <?=$theShortURL?>" class="button twitter" target="_blank">Share on <span class="icon-twitter"></span></a>
-        <a href="https://plus.google.com/share?url=<?=$theShortURL?>" class="button google-plus" target="_blank">Share on <span class="icon-google-plus"></span></a>
-        <?php } else { ?>
-        <p class="lead" id="offlineMessage"><?=$offlineMessage?></p>
-        <a class="btn btn-large btn-warning" href="#" onClick="window.location.reload()"><?=$offlineReload?></a>
-        <?php } ?>
+        <div id="onlineHeader">
+          <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
+          <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
+          <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe><br /><br />
+          <a href="http://twitter.com/home?status=Checking the VPS status page from @tlongren: <?=$theShortURL?>" class="button twitter" target="_blank">Share on <span class="icon-twitter"></span></a>
+          <a href="https://plus.google.com/share?url=<?=$theShortURL?>" class="button google-plus" target="_blank">Share on <span class="icon-google-plus"></span></a>
+        </div>
+        <div id="offlineHeader">
+          <p class="lead" id="offlineMessage"><?=$offlineMessage?></p>
+          <a class="btn btn-large btn-warning" href="#" onClick="window.location.reload()"><?=$offlineReload?></a>
+        </div>
       </div>
       <hr>
       <?php if (in_array($real_client_ip, $trustedIP)) { ?>
       <div class="row-fluid">
         <div class="offset3 span6" style="text-align: center;">
-          <?php if ($statusMessage == "offline") { ?>
-            <button class="ladda-button btn btn-large btn-primary" data-style="expand-down" id="boot"><span class="ladda-label">Boot</span><span class="ladda-spinner"></span></button>
-          <?php } ?><?php if ($statusMessage == "online") { ?>
-            <button class="ladda-button btn btn-large btn-warning" data-style="expand-down" id="reboot"><span class="ladda-label">Reboot</span><span class="ladda-spinner"></span></button> <button class="ladda-button btn btn-large btn-danger" data-style="expand-down" id="shutdown"><span class="ladda-label">Shutdown</span><span class="ladda-spinner"></span></button>
-          <?php } ?>
+          <button class="ladda-button btn btn-large btn-primary" data-style="expand-down" id="boot"><span class="ladda-label">Boot</span><span class="ladda-spinner"></span></button>
+          <button class="ladda-button btn btn-large btn-warning" data-style="expand-down" id="reboot"><span class="ladda-label">Reboot</span><span class="ladda-spinner"></span></button> <button class="ladda-button btn btn-large btn-danger" data-style="expand-down" id="shutdown"><span class="ladda-label">Shutdown</span><span class="ladda-spinner"></span></button>
         </div>
       </div>
       <div class="row-fluid" id="actionResults">
