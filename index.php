@@ -94,7 +94,7 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+    <link href="css/ladda.min.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -111,6 +111,9 @@
     <script src="js/jquery.keymapper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/spin.min.js"></script>
+    <script src="js/ladda.min.js"></script>
+    <script src="js/actions.js"></script>
   </head>
 
   <body>
@@ -135,9 +138,39 @@
         <a class="btn btn-large btn-warning" href="#" onClick="window.location.reload()"><?=$offlineReload?></a>
         <?php } ?>
       </div>
-
       <hr>
-
+      <?php if (in_array($real_client_ip, $trustedIP)) { ?>
+      <div class="row-fluid">
+        <div class="offset3 span6" style="text-align: center;">
+          <?php if ($statusMessage == "offline") { ?>
+            <button class="ladda-button btn btn-large btn-primary" data-style="expand-down" id="boot"><span class="ladda-label">Boot</span><span class="ladda-spinner"></span></button>
+          <?php } ?><?php if ($statusMessage == "online") { ?>
+            <button class="ladda-button btn btn-large btn-warning" data-style="expand-down" id="reboot"><span class="ladda-label">Reboot</span><span class="ladda-spinner"></span></button> <button class="ladda-button btn btn-large btn-danger" data-style="expand-down" id="shutdown"><span class="ladda-label">Shutdown</span><span class="ladda-spinner"></span></button>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="row-fluid" id="actionResults">
+        <div class="offset3 span6">
+          <br />
+          <div class="alert alert-block alert-info" id="bootResult">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Boot Call Complete</h4>
+            <p>VPS is booting. It should be up in a few seconds.</p>
+          </div>
+          <div class="alert alert-block alert-info" id="rebootResult">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Reboot Call Complete</h4>
+            <p>VPS is rebooting. It should only take a few seconds to complete.</p>
+          </div>
+          <div class="alert alert-block alert-info" id="shutdownResult">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Shutdown Call Complete</h4>
+            <p>VPS is shutting down. Just click the "Boot" button when you want to bring it back online</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <?php } ?>
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
