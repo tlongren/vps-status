@@ -4,6 +4,12 @@ vps-status
 A Server (VPS) Monitor that I made to quickly check the status of my [FlipHost VPS](http://www.fliphost.net/vps.html). Uses [SolusVM Client API](http://docs.solusvm.com/client_api). Your VPS provider must provide this, if it's not something they have, this is probably of zero interest to you.
 
 
+Hosting Company Usage
+=====================
+
+If you work for a web host and would like to look at offering vps-status to your customers, [get in touch with me](http://www.longren.org/contact/) and I'll be happy to help however I can.
+
+
 What It Does
 ============
 
@@ -33,10 +39,10 @@ Memory usage in the Solus API is [apparently broken](http://goo.gl/d90xx). The v
 To-Do
 =====
 
-1. If offline, offer option to boot.
-2. If online, offer option to reboot or shutdown.
+1. If offline, offer option to boot. - [Implemented](https://github.com/tlongren/vps-status/commit/a840a8ee7b89c91a900745a06e24beddb17665ab)
+2. If online, offer option to reboot or shutdown. - [Implemented](https://github.com/tlongren/vps-status/commit/a840a8ee7b89c91a900745a06e24beddb17665ab)
 3. Secure folder with .htaccess logins.
-~~4. Add a feature to do live updates with jQuery.~~
+4. Add a feature to do live updates with jQuery. - [Implemented](https://github.com/tlongren/vps-status/commit/2463ae9cc19faad26da306bde095b80d0f60c264)
 
 
 I used
