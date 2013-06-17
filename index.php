@@ -92,6 +92,10 @@
       #statusMessage {
         text-transform:capitalize;
       }
+
+      #actionResults, #bootResult, #rebootResult, #shutdownResult {
+        display:none;
+      }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/ladda.min.css" rel="stylesheet">
