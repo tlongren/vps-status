@@ -27,17 +27,16 @@ $memory = explode(",",$getStuff['mem']);
 $totalMem = $status->formatBytes($memory[0]);
 $usedMem = $status->formatBytes($memory[1]);
 $availMem = $status->formatBytes($memory[2]);
-//$memPercent = round($memory[1]/$memory[0]*100, 0);
+$memCalc = $memory[0]*100; if ($memCalc > 0) { $memPercent = round($memory[1]/$memCalc, 0); } else { $memPercent = 0; } 
 
 $disk = explode(",",$getStuff['hdd']);
 $totalDisk = $status->formatBytes($disk[0]);
 $usedDisk = $status->formatBytes($disk[1]);
 $availDisk = $status->formatBytes($disk[2]);
-//$diskPercent = round($disk[1]/$disk[0]*100, 0);
+$diskCalc = $disk[0]*100; if ($diskCalc > 0) { $diskPercent = round($disk[1]/$diskCalc, 0); } else { $diskPercent = 0; }
 
 $bandwidth = explode(",",$getStuff['bw']);
 $totalBW = $status->formatBytes($bandwidth[0]);
 $usedBW = $status->formatBytes($bandwidth[1]);
 $availBW = $status->formatBytes($bandwidth[2]);
-//$bwPercent = round($bandwidth[1]/$bandwidth[0]*100, 0);
-?>
+$bwCalc = $bandwidth[0]*100; if ($bwCalc > 0) { $bwPercent = round($bandwidth[1]/$bwCalc, 0); } else { $bwPercent = 0; }
