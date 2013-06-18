@@ -154,17 +154,14 @@
         <div class="offset3 span6">
           <br />
           <div class="alert alert-block alert-info" id="bootResult">
-            <button type="button" class="close" data-dismiss="alert">×</button>
             <h4 class="alert-heading">Boot Call Complete</h4>
             <p>VPS is booting. It should be up in a few seconds.</p>
           </div>
           <div class="alert alert-block alert-info" id="rebootResult">
-            <button type="button" class="close" data-dismiss="alert">×</button>
             <h4 class="alert-heading">Reboot Call Complete</h4>
             <p>VPS is rebooting. It should only take a few seconds to complete.</p>
           </div>
           <div class="alert alert-block alert-info" id="shutdownResult">
-            <button type="button" class="close" data-dismiss="alert">×</button>
             <h4 class="alert-heading">Shutdown Call Complete</h4>
             <p>VPS is shutting down. Just click the "Boot" button when you want to bring it back online</p>
           </div>

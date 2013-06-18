@@ -4,8 +4,8 @@ $(document).ready(function(){
     l.start();
     $.get('/performActions.php?theAction=boot', function(data) {
       l.stop();
-      $("#actionResults").show();
-      $("#bootResult").show();
+      $("#actionResults").show(0).delay(6000).hide(0);
+      $("#bootResult").show(0).delay(5000).hide(0);
     });
     return false;
   });
@@ -15,8 +15,8 @@ $(document).ready(function(){
     l.start();
     $.get('/performActions.php?theAction=reboot', function(data) {
       l.stop();
-      $("#actionResults").show();
-      $("#rebootResult").show();
+      $("#actionResults").show(0).delay(6000).hide(0);
+      $("#rebootResult").show(0).delay(5000).hide(0);
     });
     return false;
   });
@@ -26,8 +26,8 @@ $(document).ready(function(){
     l.start();
     $.get('/performActions.php?theAction=shutdown', function(data) {
       l.stop();
-      $("#actionResults").show();
-      $("#shutdownResult").show();
+      $("#actionResults").show(0).delay(6000).hide(0);
+      $("#shutdownResult").show(0).delay(5000).hide(0);
     });
     return false;
   });
