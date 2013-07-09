@@ -48,9 +48,7 @@
         <div id="onlineHeader">
           <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
           <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
-          <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe><br /><br />
-          <a href="http://twitter.com/home?status=Checking the VPS status page from @tlongren: <?=$theShortURL?>" class="button twitter" target="_blank">Share on <span class="icon-twitter"></span></a>
-          <a href="https://plus.google.com/share?url=<?=$theShortURL?>" class="button google-plus" target="_blank">Share on <span class="icon-google-plus"></span></a>
+          <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
         </div>
         <div id="offlineHeader">
           <p class="lead" id="offlineMessage"><?=$offlineMessage?></p>
