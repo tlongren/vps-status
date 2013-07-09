@@ -26,7 +26,7 @@ $memory = explode(",",$getStuff['mem']);
 $totalMem = $status->formatBytes($memory[0]);
 $usedMem = $status->formatBytes($memory[1]);
 $availMem = $status->formatBytes($memory[2]);
-$memCalc = $memory[0]*100; if ($memCalc > 0) { $memPercent = round($memory[1]/$memCalc, 0); } else { $memPercent = 0; } 
+$memPercent = round($memory[1]/$memory[0], 0)*100;
 
 $disk = explode(",",$getStuff['hdd']);
 $totalDisk = $status->formatBytes($disk[0]);
