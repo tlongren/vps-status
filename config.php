@@ -20,7 +20,6 @@ $headers = apache_request_headers(); $real_client_ip = $headers["X-Forwarded-For
 $status = new status();
 $getStuff = $status->performAction($apiurl,$apikey,$apihash,"status");
 
-
 $statusMessage = $getStuff['statusmsg'];
 
 $memory = explode(",",$getStuff['mem']);
