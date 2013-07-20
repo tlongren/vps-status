@@ -47,8 +47,7 @@
         <h1>It's <span id="statusMessage"><?=ucfirst($statusMessage)?></span></h1>
         <div id="onlineHeader">
           <p class="lead" id="onlineMessage"><?=$onlineMessage?></p>
-          <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a><br /><br />
-          <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=vps-status&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>
+          <a class="btn btn-large btn-success" href="#" onClick="window.location.reload()"><?=$onlineReload?></a>
         </div>
         <div id="offlineHeader">
           <p class="lead" id="offlineMessage"><?=$offlineMessage?></p>
