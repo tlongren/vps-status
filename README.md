@@ -32,11 +32,8 @@ Memory usage in the Solus API is [apparently broken](http://goo.gl/d90xx). The v
 
 To-Do
 =====
-
-1. If offline, offer option to boot. - [Implemented](https://github.com/tlongren/vps-status/commit/a840a8ee7b89c91a900745a06e24beddb17665ab)
-2. If online, offer option to reboot or shutdown. - [Implemented](https://github.com/tlongren/vps-status/commit/a840a8ee7b89c91a900745a06e24beddb17665ab)
-3. Secure folder with .htaccess logins.
-4. Add a feature to do live updates with jQuery. - [Implemented](https://github.com/tlongren/vps-status/commit/2463ae9cc19faad26da306bde095b80d0f60c264)
+1. Secure folder with .htaccess logins.
+2. Update to Bootstrap 3.
 
 
 I used
