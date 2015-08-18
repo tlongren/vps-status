@@ -14,6 +14,7 @@ $theShortURL = 'http://goo.gl/JZjs8V';										                // URL that will
 /* You should probably stop editing now. Only edit stuff after this if you know what you're doing. */
 
 include 'thestuff.php';
+include 'arh.php';
 
 $headers = apache_request_headers(); $real_client_ip = $headers["X-Forwarded-For"];
 
